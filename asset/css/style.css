@@ -1,0 +1,937 @@
+@font-face {
+    font-family: regular;
+    src: url(../fonts/static/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: light;
+    src: url(../fonts/static/Raleway-Light.ttf);
+}
+
+@font-face {
+    font-family: bold-one;
+    src: url(../fonts/static/Raleway-Bold.ttf);
+}
+
+* ::selection{
+    background-color: blueviolet;
+    color: white;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: regular;
+    font-size: 16px;
+}
+
+h1{
+    font-size: 50px;
+
+}
+
+.all-content{
+    
+    /* overflow-x: hidden; */
+}
+
+a{
+    text-decoration: none;
+
+}
+
+header{
+    background-image: linear-gradient(rgba(15, 15, 15, 0.7),rgba(13, 13, 14, 0.5)), url(../photo/england-people.jpg);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    
+    width: 100%;
+    
+}
+
+
+
+.header-icon{
+    background: rgba(173, 255, 47 , .4);
+    width: 15%;
+    padding: 20px  0px;
+    text-align: center;
+    border-radius: 5px;
+    color: rgb(207, 185, 185);
+    cursor: pointer;
+}
+
+
+.header-menu a{
+    color: rgb(207, 185, 185);
+    text-transform: uppercase;
+}
+
+.header-menu{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+}
+
+.header-text-form{
+    width: 30%;
+    
+}
+
+.header-text-form p{
+    color: goldenrod;
+    font-family: bold-one;
+}
+
+.header-text-form h1{
+    font-family: monospace;
+    color: white;
+    
+}
+
+
+
+.header-form{
+    background-color: white;
+    padding: 16px 26px;
+    width: 40%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.dave-school-select{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+select{
+    font-size: 16px;
+
+}
+
+
+#select{
+    padding: 10px 8px;
+    outline: none;
+    border: none;
+    border-radius: 17px;
+    background-color: rgb(223, 235, 235);
+} 
+
+input{
+    padding: 12px 8px;
+    outline: none;
+    border: none;
+    border-radius: 17px;
+    background-color: rgb(223, 235, 235);
+}
+
+.dave-course-select{
+    display: flex;
+    flex-direction: column;
+}
+
+.dave-email-select{
+    display: flex;
+    flex-direction: column;
+}
+
+.dave-tel-select{
+    display: flex;
+    flex-direction: column;
+}
+
+::placeholder{
+    font-size: 16px;
+    padding-left: 5px;
+    
+}
+label{
+    font-size: 16px;
+    font-family: bold-one;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    cursor: pointer;
+}
+
+form h3{
+    font-family: bold-one;
+    text-align: center;
+}
+
+
+.header-form-side{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+[type="submit"]{
+    background-color: goldenrod;
+    font-family: bold-one;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.header2{
+    background-color: rgba(15, 15, 15);
+    padding: 6px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    
+}
+
+
+.header2 h2{
+    color: white;
+    text-align: center;
+}
+
+.border{
+    background-color: rgba(138, 113, 50, 0.349);
+    width: 100%;
+    padding: 3px;
+    border-radius: 8px;
+    
+}
+
+.header2-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 93px 20px 93px;
+}
+
+
+
+.header-mobile{
+    display: none;
+}
+
+.bar{
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(20px);
+    margin-right: 20px;
+}
+
+.header-menu-mobile{
+    transition: all 2s ease-in-out;
+    animation-name: menu;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition: all 4s ease-in-out;
+}
+
+    @keyframes menu {
+        0%{
+            transform: translateY(-1000px);
+            opacity: 0;
+            background-color: goldenrod;
+        }
+
+        15%{
+            opacity: .15;
+            background-color: goldenrod;
+        }
+
+
+        75%{
+            opacity: .10;
+            background-color: goldenrod;
+        }
+
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+            background-color: goldenrod;
+        }
+    }
+
+.header2-box1{
+    padding: 12px;
+    background-color: goldenrod;
+    border-radius: 5px;
+}
+
+.header2-box2{
+    padding: 12px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.header2-boxes  span{
+    font-size: 30px;
+    color: white;
+    background-color: goldenrod;
+    padding: 14px 11px;
+    border-radius: 50%; 
+}
+
+.header2-box1 span{
+    padding: 14px 15px;
+}
+
+.header2-boxes .box3 span{
+    padding: 14px 18px;
+}
+
+.hotel-visit-btn input{
+    font-family: bold-one;
+    width: 100%;
+    margin-top: 60px;
+    cursor: pointer;
+
+}
+
+.school-visit-btn input{
+    font-family: bold-one;
+    width: 100%;
+    background-color: goldenrod;
+    color: white;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.header2-boxes h3{
+    font-family: bold-one;
+}
+
+
+.estate-visit-btn input{
+    font-family: bold-one;
+    width: 100%;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.hotel-visit-btn{
+    padding: 20px;
+}
+
+.school-visit-btn{
+    padding: 20px;
+}
+
+.estate-visit-btn{
+    padding: 20px;
+}
+
+.box1{
+    width: 26%;
+    margin-right: 50px;
+    transition: all 1s ease-in-out;
+}
+
+.box1:hover{
+    transform: scale(1.1);
+}
+
+.box2:hover{
+    transform: scale(1.1);
+}
+
+.box3:hover{
+    transform: scale(1.1);
+}
+
+.box2{
+    width: 26%;
+    transition: all 2s ease-in-out;
+}
+
+.box3{
+    width: 26%;
+    margin-left: 50px;
+    transition: all 2s ease-in-out;
+}
+
+.hotel-grouping{
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.school-grouping{
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.estate-grouping{
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.hotel-text{
+    margin-left: 15px;
+}
+
+.header2-boxes{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.header2-box21,.header2-box22,.header2-box23{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 20px 10px;
+    text-align: center;
+    height: auto;
+    border-radius: 5px;
+}
+
+.border2{
+    background-color: goldenrod;
+}
+
+
+
+.services-alarm-logo span {
+    padding: 16px;  
+}
+
+.services-bell-logo span{
+    padding: 16px 17px;
+}
+
+.services-message-logo span{
+    padding: 25px 14px;
+}
+
+
+.call-email{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-style: italic;
+    font-family: bold-one;
+    
+}
+
+.call-email a{
+    color: black;
+}
+
+
+
+.call-email a:hover{
+    text-decoration: underline 1px black;
+}
+
+.header4{
+    background-color: #0f0f0f;
+    margin-top: 50px;
+}
+
+
+
+
+.about-school-col:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background: rgba(135, 116, 235 , .5);
+    color: white;
+}
+
+.about-school .about-school-col:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background: #8774eb;
+    color: white;
+}
+
+.about-school .about-school-col:hover p{
+    color: white;
+}
+
+.header4 h2{
+    color: white;
+}
+
+
+
+.about-social-col{
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    margin-left: 40px;
+    width: 100%;
+    transition: all 1s ease-in-out;
+}
+
+.about-social-col img{
+    object-fit: cover;
+    display: block;
+    background-size: contain;
+    width: 300px;
+    height: 50vh;
+    border-radius: 5px;
+}
+
+.about-row{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.about-social-col:hover{
+    transform: scale(1.1);
+}
+
+.header4-p {
+    color: white;
+    text-align: center;
+}
+
+.about-layer{
+    background: transparent;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    border-radius: 5px;
+
+}
+
+.school-logo .phone-fa{
+    padding: 18px 18px;
+}
+
+
+
+.about-layer:hover{
+    background: rgba(135, 116, 235 , .5);
+}
+
+
+.about-layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    text-align: center;
+}
+
+
+.about-layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+
+}
+
+
+.about-row::-webkit-scrollbar{
+    background-color: #0f0f0f;
+    border-radius: 30px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.about-row::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+
+.about-row::-webkit-scrollbar-button{
+    background-color: #0f0f0f;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+
+.header6{
+    background-color: white;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.feed-back{
+    background-color: #0f0f0f;
+    color: white;
+    padding: 6px;
+    text-align: center;
+}
+
+
+
+
+.appoint-contact{
+    position: relative;
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.appoint-contact .appoint-content{
+    max-width: 800px;
+    text-align: center;
+    
+}
+
+
+
+
+
+.appoint-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.appoint-contactform{
+    width: 70%;
+    padding: 40px;
+    background-color: goldenrod;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+
+.appoint-contactform .appoint-inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.appoint-contactform .appoint-inputbox input,.appoint-contactform .appoint-inputbox textarea{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    resize: none;
+    background-color: rgb(223, 235, 235);
+}
+
+input,textarea{
+    transition: all 0.3s cubic-bezier(.25, .8 , .25 ,1);
+}
+
+
+
+
+.appoint-contactform .appoint-inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.appoint-contactform .appoint-inputbox input:focus ~ span,
+.appoint-contactform .appoint-inputbox input:valid ~ span,
+.appoint-contactform .appoint-inputbox textarea:focus ~ span,
+.appoint-contactform .appoint-inputbox textarea:valid ~ span
+{
+    font-family: bold-one;
+    transform: translateY(-20px);
+}
+
+.appoint-contactform .appoint-inputbox input[type="submit"]{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 12px;
+    background-color: goldenrod;
+}
+
+
+
+
+
+footer{
+    padding: 20px;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+footer a{
+    color: white;
+}
+
+
+.join{
+    display: flex;
+    
+}
+
+.join h3{
+    text-decoration: underline 2px;
+}
+
+.footer1{
+    width: 20%;
+}
+
+.footer1 p{
+    line-height: 30px;
+}
+
+.footer-home{
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+}
+
+.footer-company{
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+}
+
+
+.footer-help{
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+}
+
+.footer2{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.socio-footer{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.social-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (max-width: 770px){
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer2{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .footer1 {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .socio-footer{
+        width: 20%;
+    }
+
+    
+}
+
+
+
+@media (max-width: 768px){
+    
+
+    .footer1 p{
+        text-align: center;
+    }
+
+    footer a{
+        font-size: 14px;
+    }
+
+    .how-it-works{
+        padding: 20px;
+    }
+
+    
+
+    .appoint-contactform{
+        width: 100%;
+    }
+
+    .appoint-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+@media (max-width: 425px){
+    
+    .appoint-container{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    
+
+    .appoint-content p{
+        padding: 10px;
+    }
+
+    
+}
+
+
+
+/* MEDIA QUERY HERE */
+
+@media (max-width: 991px){
+
+
+    .header-mobile{
+        display: block;
+        
+    }
+
+    
+
+    .header-icon-mobile{
+        color: white;
+        background: rgba(173, 255, 47 , .4);
+        z-index: 2;
+        display: inline-block;
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .header-mobile .bars:hover > .bar + .header-menu-mobile {
+        display: block;
+    }
+
+    .header-icon-mobile h4{
+        cursor: pointer;
+    }
+
+    .header-menu-mobile{
+        background-color: goldenrod;
+        padding: 6px;
+        height: 100vh;
+        width: 100%;
+        display: none;
+        
+    }
+
+    
+
+    .header-menu-mobile a{
+        color: white;
+       
+    }
+
+    
+
+    
+
+    .header{
+        display: none;
+    }
+
+
+    .header-form-side{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-text-form{
+        width: 100%;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    .header-form{
+        width: 80%;
+    }
+
+    .header2-boxes{
+        display: flex;
+        flex-direction: column;
+        padding: 6px;
+    }
+
+    .box1{
+        width: 100%;
+    }
+
+    .box2{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .box3{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .border{
+        padding: 6px;
+    }
+
+    .header2-text{
+        padding: 0px;
+    }
+}
+
+
+
+
