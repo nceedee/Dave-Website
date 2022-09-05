@@ -35,10 +35,10 @@ h1{
 
 }
 
-.all-content{
+/* .all-content{
     
-    /* overflow-x: hidden; */
-}
+    overflow-x: hidden;
+} */
 
 a{
     text-decoration: none;
@@ -221,53 +221,6 @@ form h3{
 }
 
 
-
-.header-mobile{
-    display: none;
-}
-
-.bar{
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateY(20px);
-    margin-right: 20px;
-}
-
-.header-menu-mobile{
-    transition: all 2s ease-in-out;
-    animation-name: menu;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    transition: all 4s ease-in-out;
-}
-
-    @keyframes menu {
-        0%{
-            transform: translateY(-1000px);
-            opacity: 0;
-            background-color: goldenrod;
-        }
-
-        15%{
-            opacity: .15;
-            background-color: goldenrod;
-        }
-
-
-        75%{
-            opacity: .10;
-            background-color: goldenrod;
-        }
-
-        100%{
-            transform: translateY(0px);
-            opacity: 1;
-            background-color: goldenrod;
-        }
-    }
 
 .header2-box1{
     padding: 12px;
@@ -753,6 +706,134 @@ footer a{
     flex-direction: column;
 }
 
+.header-mobile{
+    display: none;
+}
+
+.header-mobile-menu{
+    background-color: goldenrod;
+    color: white;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header-mobile-list{
+    background-color: goldenrod;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: none;
+    animation: bobo;
+    animation-duration: 1s;
+    transition: all 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes bobo {
+    0%{
+        top: -100px;
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+
+
+
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.header-mobile-list .mobile-list a{
+    color: white;
+    padding-bottom: 50px;
+    line-height: 50px;
+}
+
+#cancel{
+    position: absolute;
+    right: 0;
+    top: 5;
+    padding-right: 20px;
+}
+
+
+/* MEDIA QUERY HERE */
+
+@media (max-width: 991px){
+
+    .header-mobile{
+        display: block;
+    }
+
+    .header{
+        display: none;
+    }
+
+
+    .header-form-side{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 70px;
+    }
+
+    .header-text-form{
+        width: 100%;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    .header-form{
+        width: 80%;
+    }
+
+    .header2-boxes{
+        display: flex;
+        flex-direction: column;
+        padding: 6px;
+    }
+
+    .box1{
+        width: 100%;
+    }
+
+    .box2{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .box3{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .border{
+        padding: 6px;
+    }
+
+    .header2-text{
+        padding: 0px;
+    }
+}
+
+
+
+
 @media (max-width: 770px){
     .footer{
         flex-direction: column;
@@ -826,112 +907,3 @@ footer a{
 
     
 }
-
-
-
-/* MEDIA QUERY HERE */
-
-@media (max-width: 991px){
-
-
-    .header-mobile{
-        display: block;
-        
-    }
-
-    
-
-    .header-icon-mobile{
-        color: white;
-        background: rgba(173, 255, 47 , .4);
-        z-index: 2;
-        display: inline-block;
-        width: 100%;
-        padding-left: 10px;
-    }
-
-    .header-mobile .bars:hover > .bar + .header-menu-mobile {
-        display: block;
-    }
-
-    .header-icon-mobile h4{
-        cursor: pointer;
-    }
-
-    .header-menu-mobile{
-        background-color: goldenrod;
-        padding: 6px;
-        height: 100vh;
-        width: 100%;
-        display: none;
-        
-    }
-
-    
-
-    .header-menu-mobile a{
-        color: white;
-       
-    }
-
-    
-
-    
-
-    .header{
-        display: none;
-    }
-
-
-    .header-form-side{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-text-form{
-        width: 100%;
-        text-align: center;
-    }
-
-    h1{
-        font-size: 40px;
-    }
-
-    .header-form{
-        width: 80%;
-    }
-
-    .header2-boxes{
-        display: flex;
-        flex-direction: column;
-        padding: 6px;
-    }
-
-    .box1{
-        width: 100%;
-    }
-
-    .box2{
-        width: 100%;
-        margin-top: 30px;
-    }
-
-    .box3{
-        width: 100%;
-        margin-left: 0;
-        margin-top: 30px;
-    }
-
-    .border{
-        padding: 6px;
-    }
-
-    .header2-text{
-        padding: 0px;
-    }
-}
-
-
-
-
